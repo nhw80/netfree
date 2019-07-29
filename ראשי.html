@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet">
+<title>משחק</title>
+</head>
+<body dir="rtl">
+
+<img src="person.png" id="tom">
+
+
+
+<script>
+//יצירת בנאדם ופונקציות להזזתו באמצעות החיצים   
+rig = 1;
+function zaz(e)
+{
+    if (e.keyCode == '39') {
+        rig > 0 ? rig-= 3 : rig = 0;
+    }
+    else if (e.keyCode == '37') {
+        rig < 90 ? rig+= 3 : rig = 90;
+    }
+    document.getElementById("tom").style.right = rig + "%";  
+}
+document.onkeydown = zaz;
+
+
+calldr();
+
+
+//יצירת טלפונים והצגתם כל כמה שניות רנדומליות
+function calldr(){
+setInterval(function(){
+    var imgnum = 1;
+    var random = Math.floor(Math.random() * 101); 
+    var imgcall = document.createElement("img");
+    imgcall.setAttribute("src", "phone.png");
+    imgcall.setAttribute("class", "call");
+    imgcall.style.position = "absolute";
+    imgcall.style.right = random + '%';
+    document.body.appendChild(imgcall);
+    ww = document.body.getElementsByClassName("call");
+    imgnum++;
+ }, 2000);
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>

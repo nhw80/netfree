@@ -1,0 +1,9 @@
+body{background-color: chocolate}
+#tom{
+    max-width: 100px;
+    position: absolute;
+    bottom: 10px;
+} 
+.call{
+    max-width: 30px;
+}
